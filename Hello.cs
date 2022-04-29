@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace Basic
 {
-    class Hello
+    class Program
     {
         static void Main(string[] args)
         {
