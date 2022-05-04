@@ -1,4 +1,4 @@
-﻿/*
+/*
 Auther: John Blue
 Time: 2022/5
 Platform: VS2017
@@ -37,7 +37,7 @@ namespace Basic
         {
             for (int i = 0; i < x.Length; i++)
             {
-                for (int j = 0; j < x[0].Length; j++)
+                for (int j = 0; j < x[i].Length; j++)
                 {
                     Console.Write(x[i][j]);
                 }
@@ -81,15 +81,25 @@ namespace Basic
             t = new int[3][];
             for (int i = 0; i < t.Length; i++)
             {
-                t[i] = new int[i];
+                t[i] = new int[i + 1];
                 for (int j = 0; j < t[i].Length; j++)
                 {
                     t[i][j] = i + j;
                 }
             }
+            /*
+            foreach (int[] i in t)
+            {
+                foreach (int j in i)
+                {
+                    Console.Write(j);
+                }
+            }
+            Console.WriteLine();
+            */
             // (5) (passing)
             Console.WriteLine("Rugged array");
-            rug(m);
+            rug(t);
             Console.WriteLine();
 
 
@@ -103,6 +113,13 @@ namespace Basic
                     n[i, j] = i + j;
                 }
             }
+            /*
+            foreach (int i in n)
+            {
+                Console.Write(i);
+            }
+            Console.WriteLine();
+            */
             // (2) (passing)
             Console.WriteLine("Normal array");
             fun(n);
