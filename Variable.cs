@@ -1,4 +1,4 @@
-﻿/*
+/*
 Auther: John Blue
 Time: 2022/5
 Platform: VS2017
@@ -19,9 +19,18 @@ namespace Basic
         public static double PI = 3.14159;
         static int xx = yy;
         static int yy = 6;
+        private static int zz = yy;
 
         public const int x = 10;// const default as static
         public int length;
+
+        public static int Return_zz() {
+            return zz;
+        }
+        public int Return_not_zz()
+        {
+            return zz;
+        }
 
         static void Main(string[] args)
         {
@@ -34,10 +43,12 @@ namespace Basic
 
             // member variable
             Console.WriteLine(m.length);
+            Console.WriteLine(m.Return_not_zz());// memeber function
 
             // static variable
             Console.WriteLine(Variable.x);// const default as static
             Console.WriteLine(Variable.PI);
+            Console.WriteLine(Variable.Return_zz());// static function
 
             Console.WriteLine(Variable.xx);
             Console.WriteLine(Variable.yy);
