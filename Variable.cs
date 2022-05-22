@@ -31,7 +31,11 @@ namespace Basic
         {
             return zz;
         }
-
+        
+        void ref_fun(ref int length_ref) {// C# will pass variable by copy by default; ref modifier will make passing by reference;also, C# will pass array, object by reference
+            length_ref = 30;
+        }
+        
         static void Main(string[] args)
         {
             // local const
